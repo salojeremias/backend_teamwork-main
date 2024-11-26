@@ -1,0 +1,45 @@
+<!--
+    This is the navigation bar that will be displayed on the top of the page.
+    It contains the logo, search bar, and links to the different categories of e-bicycles.
+    The logo is displayed on the left side of the navigation bar.
+    The search bar is displayed in the center of the navigation bar.
+    The links to the different categories of e-bicycles are displayed on the right side of the navigation bar.
+    The navigation bar is styled using CSS.
+-->
+
+<nav>
+    <div class="nav-top">
+        <div class="nav-left">
+            <a href="/">
+                <img src="/assets/logos/ai_bicycle_logo.png" alt="Logo" class="logo">
+            </a>
+            <input type="text" placeholder="Search..." class="search-bar">
+        </div>
+        <div class="nav-right">
+            <a href="/contact" class="icon-link">
+                <img src="/assets/icons/contact_us.png" alt="Contact Us" class="icon">
+            </a>
+            <a href="/cart" class="icon-link">
+                <img src="/assets/icons/cart.png" alt="Cart" class="icon">
+            </a>
+            <% if (user) { %>
+                <a href="#" class="icon-link" id="logout-link">
+                    <img src="/assets/icons/user_logged_in.png" alt="User" class="icon">
+                </a>
+            <% } else { %>
+                <a href="/login" class="icon-link">
+                    <img src="/assets/icons/user_logged_out.png" alt="User" class="icon">
+                </a>
+            <% } %>
+        </div>
+    </div>
+    <div class="nav-bottom">
+        <a href="city">City e-bicycles</a>
+        <a href="hybrid">Hybrid e-bicycles</a>
+        <a href="mountain">Mountain e-bicycles</a>
+    </div>
+</nav>
+
+<div id="flash-container"></div> <!-- Flash message container -->
+
+<script src="/scripts/logout.js"></script>
